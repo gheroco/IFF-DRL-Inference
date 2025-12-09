@@ -20,9 +20,9 @@ output:
     length: 5
 rewardDay: 5 #最大的reward天数
 device: cpu
-modelSavePerEpoch: 5 #多少轮保存一次权重
+modelSavePerEpoch: 1 #多少轮保存一次权重
 train:
-    epochs: 100
+    epochs: 3
     init_money: 500000
     EPS_START: 0.9
     EPS_END: 0.05
