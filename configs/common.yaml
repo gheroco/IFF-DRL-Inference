@@ -1,5 +1,5 @@
 dataDir: Incremental_Data
-dataSetName: N225  || DJI || HSI ||FCHI ||SP500 || N225 || KS11
+dataSetName: N225
 ValDataName: N225
 normalization: True
 time:
@@ -19,10 +19,10 @@ input:
 output:
     length: 5
 rewardDay: 5 #最大的reward天数
-device: cuda
-modelSavePerEpoch: 5 #多少轮保存一次权重
+device: cpu
+modelSavePerEpoch: 1 #多少轮保存一次权重
 train:
-    epochs: 100
+    epochs: 3
     init_money: 500000
     EPS_START: 0.9
     EPS_END: 0.05
@@ -35,6 +35,6 @@ train:
     target_update: 10
     reward: MinMax
     csv: False
-    learn: False
+    learn: True
 expName: TEST #
 

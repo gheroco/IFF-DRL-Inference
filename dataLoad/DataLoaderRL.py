@@ -2,7 +2,8 @@ import numpy as np
 import pandas as pd
 import torch
 from torch.utils.data import Dataset
-from torch.utils.data.dataset import T_co
+from typing import TypeVar
+T_co = TypeVar('T_co', covariant=True)
 from operator import itemgetter
 from dataLoad.utils import preProcessor
 
